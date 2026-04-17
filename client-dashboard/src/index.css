@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dashboard-bg text-dashboard-text;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-dashboard-card border border-dashboard-border rounded-2xl shadow-lg transition-all duration-300;
+  }
+  
+  .glass-card:hover {
+    @apply border-gray-600 shadow-2xl transform -translate-y-1;
+  }
+
+  .glow-active {
+    box-shadow: 0 0 20px rgba(233, 245, 89, 0.05);
+    border-color: rgba(233, 245, 89, 0.2);
+  }
+}
+
+/* Light Theme Overrides */
+.light-theme .bg-dashboard-bg { background-color: #f4f4f5 !important; }
+.light-theme .bg-dashboard-card { background-color: #ffffff !important; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1) !important; }
+.light-theme .text-white, .light-theme .text-dashboard-text { color: #18181b !important; }
+.light-theme .text-dashboard-muted { color: #71717a !important; }
+.light-theme .border-dashboard-border { border-color: #e4e4e7 !important; }
+.light-theme .bg-\[\#0a0a0b\] { background-color: #f4f4f5 !important; }
+.light-theme tr:hover { background-color: rgba(0,0,0,0.05) !important; }
